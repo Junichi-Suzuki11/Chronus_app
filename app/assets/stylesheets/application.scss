@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
 /*common*/
 * {
@@ -27,5 +29,47 @@
 }
 .link-decoration{
 	text-decoration: none;
-	color: #FFFFFF;
+	color: black;
+}
+
+// ログイン画面
+.trapezoid_area{
+	position: absolute;
+	top: 0;
+	left: 10%;
+  width: 80%;
+  border-bottom: 800px solid #b0c4de;
+  border-right: 300px solid transparent;
+  height: 0;
+  font-weight: bold;
+  color: #666;
+}
+.logo2{
+	float: right;
+	margin-top: 30px;
+	margin-right: 150px;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.title1{
+	padding: 40px 0 80px 60px;
+}
+.title2{
+	padding: 40px 0 40px 60px;
+}
+.field{
+	padding-left: 100px;
+}
+.log-in-button{
+	padding-top: 150px;
+}
+.password-link{
+	text-decoration: none;
+	color: #d3d3d3;
+}
+.create-button{
+	margin-top: 45px;
 }

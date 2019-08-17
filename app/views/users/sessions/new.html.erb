@@ -1,26 +1,44 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
+<main>
+  <%= link_to root_path do %>
+    <div class="logo2">logo</div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+  <div class="trapezoid_area">
+    <h1 class="title1">
+      Chronusにログイン
+    </h1>
 
-<%= render "users/shared/links" %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="row">
+        <div class="field col-xs-8">
+          <h3 class="subtitle">アカウント名 / メールアドレス</h3><br>
+          <%= f.email_field :email, autofocus: true, class:'form-control', :placeholder => "アカウント名（半角英数20文字以内）" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field col-xs-8">
+          <h3 class="subtitle">パスワード</h3><br>
+          <%= f.password_field :password, class:'form-control', :placeholder => "パスワード（半角英数6文字以上、16文字以内）" %>
+        </div>
+      </div>
+
+      <div class="log-in-button row">
+        <div align="right" class="col-xs-8">
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+              <%= link_to "パスワードを忘れた場合はこちら", new_password_path(resource_name), class: "password-link" %>
+          <% end %>
+        </div>
+        <div class="actions col-xs-4">
+          <%= f.submit "ログイン", class: "btn" %>
+        </div>
+      </div>
+
+    <% end %>
+
+    <p class="bottom-text">
+      <%= link_to "about us", about_path, class: "link-decoration" %>
+    </p>
+  </div>
+</main>

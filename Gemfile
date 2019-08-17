@@ -62,3 +62,9 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+
+gem 'pry-byebug'
+
+gem "jquery-rails"
+
+gem 'bootstrap-sass', '~> 3.3.6'

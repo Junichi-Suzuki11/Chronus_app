@@ -1,10 +1,10 @@
 <main>
 	<div class="trapezoid_area_left">
-		<p class="title-text">
+		<p class="top-title-text">
 			Welcome<br>
 			to
 		</p>
-		<p class="title">
+		<p class="top-title">
 			Chronus
 		</p>
 		<p class="sub-text">
@@ -19,5 +19,6 @@
 		</p>
 	</div>
 	<div class="trapezoid_area_right">
+		<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "link-decoration" %>
 	</div>
 </main>

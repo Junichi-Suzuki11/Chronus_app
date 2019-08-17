@@ -1,29 +1,40 @@
-<h2>Sign up</h2>
+<main>
+  <%= link_to root_path do %>
+    <div class="logo2">logo</div>
+  <% end %>
+  <div class="trapezoid_area">
+    <h1 class="title2">
+      アカウント作成
+    </h1>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="field col-xs-8">
+      <h4 class="subtitle">ユーザー名</h4><br>
+      <%= f.text_field :name, autofocus: true, class:'form-control', :placeholder => "ユーザー名（16文字以内）" %>
+      <h4 class="subtitle">アカウント名</h4><br>
+      <%= f.text_field :account_name, autofocus: true, class:'form-control', :placeholder => "アカウント名（半角英数20文字以内）" %>
+      <h4 class="subtitle">メールアドレス</h4><br>
+      <%= f.email_field :email, autofocus: true, class:'form-control', :placeholder => "アカウント名（半角英数20文字以内）" %>
+      <h4 class="subtitle">パスワード</h4><br>
+      <%= f.password_field :password, class:'form-control', :placeholder => "パスワード（半角英数6文字以上、16文字以内）" %>
+      <h4 class="subtitle">パスワード再入力</h4><br>
+      <%= f.password_field :password, autofocus: true, class:'form-control', :placeholder => "パスワード（半角英数6文字以上、16文字以内）" %>
+    </div>
+
+    <div class="row">
+      <div align="right" class="col-xs-10">
+        <p class="sub-text">Chronusを始めよう！</p>
+      </div>
+      <div class="actions col-xs-2">
+        <%= f.submit "アカウント作成", class: "btn create-button" %>
+      </div>
+    </div>
+
+    <% end %>
+
+    <p class="bottom-text">
+      <%= link_to "about us", about_path, class: "link-decoration" %>
+    </p>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</main>
