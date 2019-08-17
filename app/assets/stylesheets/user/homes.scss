@@ -1,0 +1,58 @@
+// Place all the styles related to the user/Homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// トップページ
+.trapezoid_area_left {
+	position: absolute;
+	top: 0;
+	left: 10%;
+  width: 50%;
+  border-bottom: 800px solid #b0c4de;
+  border-right: 300px solid transparent;
+  height: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #666;
+}
+.trapezoid_area_right {
+	position: absolute;
+	top: 0;
+	left: 40%;
+  width: 50%;
+  border-top: 800px solid #778899;
+  border-left: 300px solid transparent;
+  height: 0;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+.title-text, .title{
+	text-align: left;
+	padding-left: 25%;
+}
+.title-text{
+	padding-top: 100px;
+	font-size: 60px;
+}
+.title{
+	font-size: 80px;
+}
+.sub-text{
+	padding-top: 50px;
+	padding-left: 25%;
+	color: #d3d3d3;
+}
+.logo{
+	height: 150px;
+	width: 150px;
+	margin-top: 100px;
+	margin-left: 100%;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+.bottom-text{
+	position: absolute;
+	top: 760px;
+	left: 8%;
+}
