@@ -32,6 +32,98 @@
 	color: black;
 }
 
+// ヘッダー
+header{
+	width: 90%;
+	margin: 0 auto;
+}
+.header-logo{
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+.header-main{
+	height: 100px;
+	border: 1px solid black;
+	padding: 0;
+}
+.header-top{
+	height: 70px;
+	border: 1px solid black;
+	padding: 0;
+}
+.header-bottom{
+	height: 30px;
+	border: 1px solid black;
+}
+.header-link-top{
+	text-align: center;
+	line-height: 70px;
+	font-size: 44px;
+}
+.header-link-bottom{
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+// main
+main{
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.main-area{
+  width: 100%;
+  border: 1px solid black;
+}
+.main-trapezoid-area{
+	width: 100%;
+	border-top: 200px solid #b0c4de;
+	border-left: 200px solid transparent;
+	height: 0;
+	font-weight: bold;
+	color: #666;
+}
+.contents {
+  position: relative;
+  overflow: hidden;
+}
+.contents:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 100%;
+  margin: 2% -10% 0;
+  background: #011931;
+  transform-origin: right center;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+.contents_inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 150px 10px 120px;
+  color: #fff;
+  text-align: center;
+}
+.main-link1{
+	font-size: 50px;
+	line-height: 10px;
+}
+.main-link2{
+	font-size: 60px;
+	line-height: 10px;
+}
+.main-link3{
+	font-size: 70px;
+	line-height: 10px;
+}
+
 // ログイン画面
 .trapezoid_area{
 	position: absolute;
@@ -53,7 +145,6 @@
 	border-radius: 50%;
 	border: 1px solid black;
 }
-
 .title1{
 	padding: 40px 0 80px 60px;
 }

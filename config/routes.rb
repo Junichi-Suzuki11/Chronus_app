@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  get '/mypage', to: 'user/users#show'
+
 	get '/about' => 'user/homes#about'
   root 'user/homes#top'
 
